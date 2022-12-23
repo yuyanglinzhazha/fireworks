@@ -7,7 +7,7 @@ ocas.height = canvas.height = window.innerHeight;
 var bigbooms = [];
 
 window.onload = function() {
-    setInterval("toggleSound()",100);
+    // setInterval("toggleSound()",100);
     initAnimate();
 };
 
@@ -110,6 +110,7 @@ var raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || 
         window.setTimeout(callback, 1000 / 60)
     };
 canvas.onclick = function() {
+    toggleSound();
     var x = event.clientX;
     var y = event.clientY;
     var bigboom = new Boom(getRandom(canvas.width / 3, canvas.width * 2 / 3), 2, "#FFF", {
